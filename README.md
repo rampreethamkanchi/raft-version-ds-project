@@ -2,7 +2,7 @@
 
 This is a distributed collaborative text editor implementing Operational Transformation (OT) on top of the Raft consensus algorithm. It ensures high availability, strong consistency, and correct convergence of concurrent edits even in the face of network latency or server crashes.
 
-Based on the [EasySync algorithm](easysync-algorithm-description.md) and embedding OT within the Raft state machine to solve the consensus/convergence problem gracefully.
+Based on the EasySync algorithm and embedding OT within the Raft state machine to solve the consensus/convergence problem gracefully.
 
 ## Architecture
 
