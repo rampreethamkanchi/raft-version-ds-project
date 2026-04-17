@@ -51,19 +51,6 @@ Once running, you can connect clients by opening multiple browser tabs to any of
 
 The follower nodes will correctly respond to client HTTP, provide catch-up connections, and `REDIRECT` writes to the leader.
 
-## Testing
-
-The project has comprehensive test coverage, proving both the mathematics of the OT algorithm and the distributed properties of the Raft cluster:
-
-```bash
-go test ./... -v
-```
-
-Highlights of the test suite:
-- `internal/ot/ot_test.go`: Mathematic property-based checks verifying `Compose` and `Follow`.
-- `tests/cluster_test.go`: Validating `A*f(A,B) == B*f(B,A)` over an in-memory 3-node cluster.
-- `tests/crash_test.go`: Proving the cluster survives follower crashes, continues committing changes, and that duplicate submissions are discarded via the idempotency guard (the "No-Rollback" invariant).
-
 ## Clean Up
 
 To start fresh, delete the data directory:
