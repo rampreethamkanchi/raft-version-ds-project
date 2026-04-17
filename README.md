@@ -52,7 +52,6 @@ Once running, you can connect clients by opening multiple browser tabs to any of
 The follower nodes will correctly respond to client HTTP, provide catch-up connections, and `REDIRECT` writes to the leader.
 
 ## Clean Up
-
 To start fresh, delete the data directory:
 
 ```bash
